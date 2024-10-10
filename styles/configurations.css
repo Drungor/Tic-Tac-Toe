@@ -63,3 +63,14 @@
     color: var(--primary-color-700);
     margin: 0.5rem 0;
 }
+
+.error label {
+    color: var(--impact-color);;
+}
+
+.error input {
+    border-color: var(--impact-color);
+    color: var(--impact-color);;
+    font-weight: bold;
+    background-color: #fde8e8;
+}
