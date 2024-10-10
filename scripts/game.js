@@ -1,12 +1,18 @@
 function ResetGamestatus() {
     activePlayer = 0;
     currentRound = 1;
-    ganeOverElement.firstElementChild.innertHTML = 'You won! <span id="winner-name" >PLAYER NAME</span>! ';
+    gameOverElement.firstElementChild.innertHTML = 'You won! <span id="winner-name" >PLAYER NAME</span>! ';
     gameOverElement.style.display = 'none';
 
+
+    let gameBoardIndex = 0;
     for (let i = 0; i < 3; i++) {   
         for (let j = 0; j < 3; j++) {
             gameData[i][j] = 0;
+            const gameBoardItemElement = gameBoardElement.children[gameBoardIndex];
+            gameBoardItemElement.textContent = '';
+            gameBoardItemElement.classList.remove('disabled');
+            gameBoardIndex++;
         }
     }
 }
@@ -19,9 +25,12 @@ function startNewGame () {
     if (!activeGameElement) {
         activeGameElement = document.getElementById('active-game'); // Ensure this ID matches your HTML
     }
-    activeGameElement.style.display = 'block';
+
+    ResetGamestatus();
 
     ActivePlayerNameElement.textContent = players[activePlayer].name;
+    activeGameElement.style.display = 'block';
+
     // gameFieldElements.style.display ='block';
 }
 
