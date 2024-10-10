@@ -1,7 +1,11 @@
 :root {
-    --primary-color: #86b9ba;
-    --primary-color-hovered: #649192;
+    --primary-color-300: #aed0d1;
+    --primary-color-500: #86b9ba;
+    --primary-color-hovered: #539192;
+    --primary-color-700:#539192 ;
+    --primary-color-900:#417172 ;
     --secondary-color: #f1f0ef;
+    --impact-color: #f15e5d;
     --dark-color: #40373f;
     --light-color: #f1f0ef;
 }
@@ -14,7 +18,7 @@ body {
 }
 
 #main-header{
-    background-color: var(--primary-color);
+    background-color: var(--primary-color-500);
     color: var(--light-color);    ;
     padding: 2rem 5%;
     text-align: center;
@@ -23,8 +27,8 @@ body {
 .btn {
     font: inherit;
     padding: 0.5 rem 1.5rem;
-    background-color: var(--primary-color);
-    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color-500);
+    border: 1px solid var(--primary-color-500);
     color: var(--light-color);
     border-radius: 4px;
     cursor: pointer;
@@ -33,7 +37,8 @@ body {
 .rvs-btn {
     background-color: transparent;
     border-color: transparent;
-    color: var(--primary-color);
+    color: var(--primary-color-700);
+    font-weight: 700;
 }
 
 .btn:hover {
@@ -44,7 +49,8 @@ body {
 
 .rvs-btn:hover{
     color: var(--primary-color-hovered);
-    background-color:#d2d2d2 ;
+    background-color:var(--primary-color-500) ;
     border-color: transparent;
+    color: var(--primary-color-900);
 }
 
