@@ -1,3 +1,16 @@
+function ResetGamestatus() {
+    activePlayer = 0;
+    currentRound = 1;
+    ganeOverElement.firstElementChild.innertHTML = 'You won! <span id="winner-name" >PLAYER NAME</span>! ';
+    gameOverElement.style.display = 'none';
+
+    for (let i = 0; i < 3; i++) {   
+        for (let j = 0; j < 3; j++) {
+            gameData[i][j] = 0;
+        }
+    }
+}
+
 function startNewGame () {
     if (players[0].name === '' ||players[1].name === '') {
         alert ('Please enter playernames');
