@@ -34,7 +34,7 @@ const editPlayer2BtnElement = document.getElementById('edit-player-2-btn');
 const cancelConfigBtnElement = document.getElementById('cancel-config-btn');
 const gameFieldElements = document.querySelectorAll('#game-board li') //don't  forget that querySelector  required a css selector 
 const ActivePlayerNameElement = document.getElementById('active-player-name');
-
+const gameOverElement = document.getElementById('game-over');
 
 editPlayer1BtnElement.addEventListener('click', openPlayerConfig);
 editPlayer2BtnElement.addEventListener('click', openPlayerConfig);
