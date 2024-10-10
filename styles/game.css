@@ -54,8 +54,8 @@
 }
 
 #game-board li.disabled {
-    pointer-events: none;
+    /* pointer-events: none; */
     background-color: var(--primary-color-700);
     color: white;
-    cursor: default;/*cursorchange when interact */
+    cursor: default;/*cursor change when interact */
 }

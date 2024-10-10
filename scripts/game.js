@@ -46,40 +46,43 @@ function switchPlayer() {
 }
 
 
-
 function selectGameField(event) {
     if (event.target.tagName !== 'LI' || gameIsOver) {
         return;
     }
-
+    
     const selectedField = event.target;
     const selectedColumn = selectedField.dataset.col - 1;
     const selectedRow = selectedField.dataset.row - 1;
-    
-    
-    console.log()
+    // const disabledLiElements = document.querySelectorAll('.disabled');
+
+
+    console.log('Value in gameData before move:', gameData[selectedRow][selectedColumn]);
+
     if (gameData[selectedRow][selectedColumn] > 0) {
         alert('This field is already taken');
         return;
     }
-    
+
     selectedField.textContent = players[activePlayer].symbol; // player [0]
     selectedField.classList.add('disabled');
     gameData[selectedRow][selectedColumn] = activePlayer + 1;
-
+    
     const winnerId = checkForGameOver();
-
+    
     console.log(winnerId);
-
+    
     if (winnerId !== 0) {
         endGame(winnerId);
         return
     }
+    
 
     currentRound++;
     switchPlayer();
-
+    
 }
+
 
 function checkForGameOver(){
     //check for horizontal win
