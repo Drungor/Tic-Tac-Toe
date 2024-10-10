@@ -1,8 +1,20 @@
+:root {
+    --primary-color: #86b9ba;
+    --secondary-color: #f1f0ef;
+    --dark-color: #40373f;
+    --light-color: #f1f0ef;
+}
+
 body {
     margin: 0;
     font-family: 'Noto Sans', sans-serif;
-    color: rgb(44, 41, 44);
-    background-color: rgb(247, 239, 247);
+    color: var(--dark-color);
+    background-color: var(--light-color);
 }
 
-#main-header
+#main-header{
+    background-color: var(--primary-color);
+    color: var(--light-color);    ;
+    padding: 2rem 5%;
+    text-align: center;
+}
